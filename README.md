@@ -12,4 +12,8 @@ jd_necklace_new.js --- 新版点点券 [可用性未知]
 long_half_redrain.js --- longzhuzhu的半点红包雨 [可用]
 
 long_super_redrain.js --- longzhuzhu的整点红包雨 [可用]
+
+jd_angryBean.js --- cdle的抢京豆 [可用]
+
+jd_goodMorning.js --- cdle的早期福利 [可用]
 ```
