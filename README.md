@@ -9,6 +9,7 @@
 |long_super_redrain.js|longzhuzhu的整点红包雨|可用|
 |jd_angryBean.js|cdle的抢京豆|可用|
 |jd_goodMorning.js|cdle的早起福利|可用|
+|jd_ckcheck.js|MoneyMr的ck到期时间检查工具，要配合面板用|可用|
 |sendNotify.js|MoneyMr的推送脚本，可以实现黑名单活动不推送消息|可用|
 
 ## Use
