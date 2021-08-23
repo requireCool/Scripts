@@ -13,8 +13,8 @@
 
 ## Use
 
-* For sendNotify.js
-  1. 通知黑名单 export NOTIFY_SKIP_LIST="店铺签到&京东手机狂欢城"
+* #### For sendNotify.js
+  1. 通知黑名单 `export NOTIFY_SKIP_LIST="店铺签到&京东手机狂欢城"`
   2. 配合`account.json`（例如下），将原有的的`sendNotify.js`修改为`sendNotify2.js`可以实现一对一推送
 ```
 [
