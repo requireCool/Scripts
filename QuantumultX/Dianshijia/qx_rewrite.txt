@@ -1,0 +1,3 @@
+http:\/\/api\.gaoqingdianshi\.com\/api\/v\d\/sign\/signin url script-request-header https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Dianshijia/dianshijia.js
+
+http:\/\/api\.gaoqingdianshi\.com\/api\/v2\/cash\/withdrawal url script-request-header https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Dianshijia/dianshijia.js
