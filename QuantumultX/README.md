@@ -1,6 +1,7 @@
-## Scripts for QuantumultX
+# Scripts for QuantumultX
 
-#### 1. Youth - 中青阅读
+### 1. Youth - 中青阅读
+
 | 名称             | 描述            | 状态 |
 |----------------|---------------|----|
 | youth.js       | 中青阅读          | √  |
@@ -9,7 +10,7 @@
 | qx_rewrite.txt | 中青阅读(获取CK、浏览赚、看看赚)-QX重写   | √  |
 |qx_youthread.txt|中青自动阅读(获取浏览的文章body)-QX重写| √  |
 
-**中青看点最新版2.3.1版本抓不到ck，所以需要下载2.02版本的中青抓取ck**
+**中青看点极速版的新版本抓不到ck，所以需要下载2.02版本的中青抓取ck**
 
 **使用方法**
 1. 重写-引用-资源路径 https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/qx_rewrite.txt
