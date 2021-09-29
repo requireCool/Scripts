@@ -272,7 +272,10 @@ function dotask(code) {
                 console.log('任务代码:' + code + '，获得金币:' + taskres.data.getCoin)
                 if (code == 'playTask' && taskres.data.doneStatus == 3) {
                     detail += `【播放任务】🔕 完成/共计 ` + CompCount + `/` + CountMax + ` 次\n`
+                } else if (code == 'ShortVideoPlay' && taskres.data.doneStatus == 3){
+                    detail += `【刷短视频】🔕 完成/共计 ` + CompCount + `/` + CountMax + ` 次\n`
                 }
+                
             } else if (taskcode == '4000') {
                 //console.log('任务代码:'+code+'，'+taskres.msg)
             }
