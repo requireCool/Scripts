@@ -250,7 +250,7 @@ function cashlist() {
 
 function tasks(tkcode) {
     return new Promise(async(resolve, reject) => {
-        let taskcode = ['1M005', '1M002', 'playTask', 'SpWatchVideo', 'Mobilewatchvideo', 'MutilPlatformActive', 'FirstDownLoginTv', 'FirstDownLoginMobile', 'inviteTask', 'taskExtraIos', 'ShortVideoPlay', 'task_mobile_visit_song', 'task_mobile_upload_album']
+        let taskcode = ['1M005', '1M002', 'playTask', 'SpWatchVideo', 'Mobilewatchvideo', 'MutilPlatformActive', 'FirstDownLoginTv', 'FirstDownLoginMobile', 'inviteTask', 'taskExtraIos', 'ShortvideoPlay', 'task_mobile_visit_song', 'task_mobile_upload_album']
         for (code of taskcode) {
             await dotask(code)
         }
@@ -272,7 +272,7 @@ function dotask(code) {
                 console.log('任务代码:' + code + '，获得金币:' + taskres.data.getCoin)
                 if (code == 'playTask' && taskres.data.doneStatus == 3) {
                     detail += `【播放任务】🔕 完成/共计 ` + CompCount + `/` + CountMax + ` 次\n`
-                } else if (code == 'ShortVideoPlay' && taskres.data.doneStatus == 3){
+                } else if (code == 'ShortvideoPlay' && taskres.data.doneStatus == 3){
                     detail += `【刷短视频】🔕 完成/共计 ` + CompCount + `/` + CountMax + ` 次\n`
                 }
                 
