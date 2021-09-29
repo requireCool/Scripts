@@ -250,7 +250,7 @@ function cashlist() {
 
 function tasks(tkcode) {
     return new Promise(async(resolve, reject) => {
-        let taskcode = ['1M005', '1M002', 'playTask', 'SpWatchVideo', 'Mobilewatchvideo', 'MutilPlatformActive']
+        let taskcode = ['1M005', '1M002', 'playTask', 'SpWatchVideo', 'Mobilewatchvideo', 'MutilPlatformActive', 'FirstDownLoginTv', 'FirstDownLoginMobile', 'inviteTask', 'taskExtraIos', 'ShortVideoPlay', 'task_mobile_visit_song', 'task_mobile_upload_album']
         for (code of taskcode) {
             await dotask(code)
         }
