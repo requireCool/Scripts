@@ -12,7 +12,7 @@ const notify = $.isNode() ? require('./sendNotify') : '';
 let sleeping = "",
     detail = ``,
     subTitle = ``;
-let RewardId = $.getdata('REWARD') || '45'; //额外签到奖励，默认45为兑换0.4元额度，51为兑换1天VIP，58为兑换1888金币
+let RewardId = '45'; //额外签到奖励，默认45为兑换0.4元额度，51为兑换1天VIP，58为兑换1888金币
 const dianshijia_API = 'http://api.gaoqingdianshi.com/api'
 let tokenArr = [],
     DsjurlArr = [],
@@ -120,7 +120,7 @@ async function run() {
 function signin() {
     return new Promise((resolve, reject) => {
         $.get({
-            url: `${dianshijia_API}/v5/sign/signin?accelerate=0&ext=0&ticket=`,
+            url: `http://act.gaoqingdianshi.com/api/v7/sign/signin?accelerate=0&ext=0&ticket=`,
             headers: JSON.parse(signheaderVal)
         }, async(error, response, data) => {
             if (logs) $.log(`${$.name}, 签到结果: ${data}\n`)
@@ -151,7 +151,7 @@ function signin() {
 function signinfo() {
     return new Promise((resolve, reject) => {
         $.get({
-            url: `${dianshijia_API}/v4/sign/get`,
+            url: `http://act.gaoqingdianshi.com/api/v8/sign/get`,
             headers: JSON.parse(signheaderVal)
         }, (error, response, data) => {
             if (logs) $.log(`${$.name}, 签到信息: ${data}\n`)
@@ -261,7 +261,7 @@ function tasks(tkcode) {
 function dotask(code) {
     return new Promise((resolve, reject) => {
         $.get({
-            url: `${dianshijia_API}/v4/task/complete?code=${code}`,
+            url: `http://act.gaoqingdianshi.com/api/v5/task/complete?code=${code}`,
             headers: JSON.parse(signheaderVal)
         }, (error, response, data) => {
             let taskres = JSON.parse(data),
