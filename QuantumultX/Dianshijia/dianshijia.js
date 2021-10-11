@@ -76,7 +76,7 @@ if (isGetCookie = typeof $request !== 'undefined') {
     bjTime = new Date(timestamp).toLocaleString('zh', {hour12: false,timeZoneName: 'long'}); //标准北京时间
     console.log(`\n === 脚本执行 ${bjTime} ===\n`);
     console.log(`------------- 共${tokenArr.length}个账号`);
-   
+    console.log(`rewardID=${RewardId}`)
     for (let i = 0; i < tokenArr.length; i++) {
         if (tokenArr[i]) {
             signheaderVal = tokenArr[i];
