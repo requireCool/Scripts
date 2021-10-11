@@ -475,7 +475,7 @@ function Withdrawal() {
                 detail += `【金额提现】✅ 到账` + todrawal.data.price / 100 + `元 🌷\n`
                 drawalCode = todrawal.errCode
             } else {
-                detail += `提现` + todrawal.data.price / 100 + `元失败，原因：` + todrawal.msg
+                detail += `提现` + todrawal.data.price / 100 + `元失败，原因：` + todrawal.msg + `\n`
             }
             resolve()
         })
