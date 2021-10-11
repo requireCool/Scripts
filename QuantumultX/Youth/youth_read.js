@@ -5,6 +5,12 @@
 
 多个请求体时用'&'号或者换行隔开" ‼️
 
+[task_local]
+20 10,14,18 * * * https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/youth_read.js, enabled=true, tag=中青自动阅读
+
+[Script]
+cron "20 10,14,18 * * *" script-path=https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/youth_read.js,tag=中青自动阅读
+
 */
 
 

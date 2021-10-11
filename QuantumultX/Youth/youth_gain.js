@@ -13,6 +13,12 @@ https:\/\/kandian\.wkandian\.com\/v5\/Nameless\/adlickstart\.json url script-req
 
 多个请求体时用'&'号或者换行隔开"，本脚本可自动删除失效请求，请须知 ‼️
 
+[task_local]
+10 8,12,16 * * * https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/youth_gain.js, enabled=true, tag=中青看点浏览赚+看看赚
+
+[Script]
+cron "10 8,12,16 * * *" script-path=https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/youth_gain.js,tag=中青看点浏览赚+看看赚
+
 */
 
 

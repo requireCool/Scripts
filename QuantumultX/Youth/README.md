@@ -19,9 +19,9 @@
 **QuanX本地任务配置**
 ```
 [task_local]
-1 */5 * * * https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/youth.js, enabled=true, tag=中青看点
-30 6 * * * https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/youth_gain.js, enabled=false, tag=中青看点浏览赚+看看赚
-10 1-23 * * * https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/youth_read.js, enabled=false, tag=中青自动阅读
+1 0-1,6-23 * * * https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/youth.js, enabled=true, tag=中青看点
+10 8,12,16 * * * https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/youth_gain.js, enabled=true, tag=中青看点浏览赚+看看赚
+20 10,14,18 * * * https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/youth_read.js, enabled=true, tag=中青自动阅读
 ```
 
 **QL环境变量**
@@ -34,5 +34,7 @@
 | youth_autoread| YOUTH_READ |
 | autotime_zq | YOUTH_TIME |
 | 看教程抓包 | YOUTH_ARTBODY |
+
+如果环境变量不对，就自己看教程吧
 
 >教程参考自[Blu843](https://note.youdao.com/ynoteshare1/index.html?id=3a17dce54e83fd25a7a3de757b9b70cc&amp;type=note#/)，邀请码46700767

@@ -4,7 +4,13 @@
 本脚本仅适用于中青看点极速版领取青豆
 食用说明请查看本仓库目录Taskconf/youth/readme.md，其中打卡挑战赛可通过Boxjs开关，报名时间为23点，早起打卡时间为早5点，报名需1000青豆押金，打卡成功可返1000+青豆，打卡失败则押金不予返还，请注意时间运行，
 转发文章获得青豆不实，请无视
-1 0-1,6-23 * * *
+
+[task_local]
+1 0-1,6-23 * * * https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/youth.js, enabled=true, tag=中青看点
+
+[Script]
+cron "1 0-1,6-23 * * *" script-path=https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/youth.js,tag=中青看点
+
 */
 
 const $ = new Env("中青看点");
