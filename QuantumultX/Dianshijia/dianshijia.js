@@ -251,11 +251,11 @@ function cashlist() {
                 } else if (!cashres && cashtotal) {
                     detail += `【提现结果】今日未提现 共计提现:` + cashtotal + `元\n`
                    if (!drawalVal) {
-                 detail += `【金额提现】❌ 请获取提现地址 \n`
-            } else {
-                 await Withdrawal()
-            }
-                }
+                    detail += `【金额提现】❌ 请获取提现地址 \n`
+                   } else {
+                      await Withdrawal()
+                     }
+                  }
             } else {
                 console.log(`提现列表失败，可忽略: ${data}`)
             }
@@ -469,11 +469,13 @@ function Withdrawal() {
             url: drawalVal,
             headers: JSON.parse(signheaderVal)
         }, (error, response, data) => {
-            if (logs) $.log(`金币随机兑换 : ${data}\n`)
+            if (logs) $.log(`金币兑换现金 : ${data}\n`)
             let todrawal = JSON.parse(data);
             if (todrawal.errCode == 0) {
                 detail += `【金额提现】✅ 到账` + todrawal.data.price / 100 + `元 🌷\n`
                 drawalCode = todrawal.errCode
+            } else if (todrawal.errCode == 31) {
+                detail += `提现${{todrawal.data.price}/100}元失败，原因：${todrawal.msg}`
             }
             resolve()
         })
