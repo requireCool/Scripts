@@ -4,4 +4,4 @@ https:\/\/ios\.baertt\.com\/v5\/article\/info\/get\.json url script-request-head
 
 https:\/\/ios\.baertt\.com\/v5\/article\/complete\.json url script-request-body https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/Youth_Read.js
 
-https:\/\/ios\.baertt\.com/v5\/user\/stay\.json url script-request-body https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/Youth_Read.js
+https:\/\/ios\.baertt\.com/v5\/user\/app\_stay\.json url script-request-body https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/Youth_Read.js
