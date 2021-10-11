@@ -4,7 +4,9 @@
 ```
 BoxJs配置连接 https://chavyleung.gitbook.io/boxjs/
 
-BoxJs订阅链接 https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/sunert.boxjs.json
+BoxJs订阅链接 https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/requireCool.boxjs.json
+
+#订阅内容感谢: @NobyDa @sunert @ChuheGit
 ```
 
 ### Index
