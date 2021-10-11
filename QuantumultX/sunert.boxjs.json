@@ -1,31 +1,49 @@
 {
-  "id": "sunert.app.sub", 
-  "author": "@Sunert", 
-  "icon": "https://avatars2.githubusercontent.com/u/47924389?s=460&u=5152f048a9e8aaa45102763a578172407c40fcc8&v=4", 
-  "name": "Sunert 签到应用订阅", 
-  "repo": "https://github.com/Sunert/Script/tree/master", 
+  "id": "app.sub", 
+  "author": "Thanks: @ChuheGit @Sunert", 
+  "icon": "http://bpic.588ku.com/element_origin_min_pic/17/12/11/76d0189411d311e66045cbe87790e09c.jpg", 
+  "name": "requireCool 签到应用订阅", 
+  "repo": "https://gitee.com/requireCool/Scripts/tree/master/QuantumultX", 
   "apps": [
     {
-      "author": "@sunert", 
-      "descs_html": [
-        "<h4 align=\"center\">获取Cookie以及脚本配置请查看<a href=\"https://github.com/Sunert/Script/raw/master/TaskConf/sina/readme.md\">配置说明</a></h4>", 
-        "<br />", 
-        "<p>其中<font color='#FF0000',font-weight: bold>wb_nick</font>为账号昵称，无需另外获取，脚本运行可自动生成，wb_cookie为任务红包余额，获取后方可显示，可选，sy_token_wb为微博签到token，必选</p>"
-      ], 
+      "id": "xmSports",
+      "name": "小米运动",
       "keys": [
-        "sy_token_wb", 
-        "wb_cookie", 
-        "wb_nick"
-      ], 
-      "repo": "https://github.com/Sunert/Script/blob/master/Task/weibo.js", 
-      "id": "weibo", 
-      "script": "https://raw.githubusercontent.com/Sunert/Script/master/Task/weibo.js", 
-      "name": "新浪微博", 
+        "xmSportsToken",
+        "xmMinStep",
+        "xmMaxStep"
+      ],
+      "settings": [
+        {
+          "id": "xmSportsToken",
+          "name": "小米运动Token",
+          "val": "",
+          "type": "text",
+          "desc": "小米运动登录时获取的token"
+        },
+        {
+          "id": "xmMinStep",
+          "name": "最小运动步数",
+          "val": "19000",
+          "type": "text",
+          "desc": "需要修改最小的运动步数的数字,例如:19000"
+        },
+        {
+          "id": "xmMaxStep",
+          "name": "最大运动步数",
+          "val": "25000",
+          "type": "text",
+          "desc": "需要修改最小的运动步数的数字,例如:25000"
+        }
+      ],
+      "author": "@jd",
+      "repo": "https://gitee.com/jd/jd_scripts/tree/master",
+      "script": "https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/backUp/xmSports.js",
       "icons": [
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/weibo.png", 
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/weibo.png"
+        "https://raw.githubusercontent.com/58xinian/icon/master/xmyd_mini.png",
+        "https://raw.githubusercontent.com/58xinian/icon/master/xmyd.png"
       ]
-    }, 
+    },
     {
       "author": "@sunert", 
       "descs_html": [
@@ -219,63 +237,7 @@
         "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/kuaishou.png", 
         "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/kuaishou.png"
       ]
-    }, 
-    {
-      "author": "@sunert", 
-      "keys": [
-        "china_telecom_authToken_10000", 
-        "china_telecom_cookie",
-        "telecom_sign",
-        "telecom_act"
-      ], 
-      "repo": "https://github.com/Sunert/Script/blob/master/Task/telecomSky.js", 
-      "id": "chinatelecomEnquiry", 
-      "script": "https://raw.githubusercontent.com/Sunert/Script/master/Task/telecomSky.js", 
-      "settings": [
-        {
-          "id": "Mon", 
-          "val": "2020-08", 
-          "name": "查询月份", 
-          "type": "month", 
-          "desc": "填入账单月份，可查最近六个月，本月账单下月可查"
-        }
-      ], 
-      "name": "天翼电信套餐查询", 
-      "icons": [
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/telecominfinty.png", 
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/telecominfinty.png"
-      ]
-    }, 
-    {
-      "author": "@sunert", 
-      "keys": [
-        "sy_cookie_dj"
-      ], 
-      "repo": "https://github.com/Sunert/Script/blob/master/Task/jddj.js", 
-      "id": "jddj", 
-      "script": "https://raw.githubusercontent.com/Sunert/Script/master/Task/jddj.js", 
-      "name": "京东到家", 
-      "icons": [
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/jddj.png", 
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/jddj.png"
-      ]
-    }, 
-    {
-      "author": "@sunert", 
-      "keys": [
-        "token_lkyl",
-        "signature_lkyl",
-        "cookie_lkyl"
-      ], 
-      "repo": "https://github.com/Sunert/Script/blob/master/Task/lkyl.js", 
-      "id": "lkyl", 
-      "script": "https://raw.githubusercontent.com/Sunert/Script/master/Task/lkyl.js", 
-      "name": "来客有礼", 
-      "icons": [
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/lkyl.png", 
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/lkyl.png"
-      ]
-    }, 
+    },
     {
       "author": "@sunert", 
       "keys": [
@@ -411,216 +373,6 @@
       "icons": [
         "https://cdn.jsdelivr.net/gh/Sunert/Profiles@master/QuantumultX/Rules/Images/icon/baiduspeed_mini.png", 
         "https://cdn.jsdelivr.net/gh/Sunert/Profiles@master/QuantumultX/Rules/Images/icon/baiduspeed.png"
-      ]
-    }, 
-    {
-      "author": "@sunert", 
-      "keys": [
-        "sy_signurl_txnews", 
-        "sy_cookie_txnews", 
-        "video_txnews", 
-        "prize_txnews",
-        "txnews_id"
-      ], 
-      "repo": "https://github.com/Sunert/Script/blob/master/Task/txnews.js", 
-      "id": "txnews", 
-      "script": "https://raw.githubusercontent.com/Sunert/Script/master/Task/txnews.js", 
-      "settings": [
-        {
-          "id": "notifynum", 
-          "placeholder": "默认50 (点击以展开说明)", 
-          "val": "", 
-          "name": "通知频率", 
-          "type": "number", 
-          "desc": "阅读篇数间隔通知开为1，常关为0(默认50篇)"
-        }, 
-        {
-          "id": "txnews_id", 
-          "placeholder": "stair_redpack_chajian", 
-          "val": "", 
-          "name": "自定义活动ID", 
-          "type": "text"
-        }
-      ], 
-      "name": "腾讯新闻", 
-      "icons": [
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/txnews.png", 
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/txnews.png"
-      ]
-    }, 
-    {
-      "author": "@sunert", 
-      "keys": [ ], 
-      "repo": "https://github.com/Sunert/Script/blob/master/Task/tvpreview.js", 
-      "id": "translate", 
-      "script": "https://raw.githubusercontent.com/Sunert/Script/master/Task/translate.js", 
-      "settings": [
-        {
-          "id": "word", 
-          "placeholder": "Hello World", 
-          "val": "Hello World", 
-          "name": "原文", 
-          "type": "textarea", 
-          "desc": "兼容中英文短语翻译，填入原文后手动运行"
-        }
-      ], 
-      "name": "谷歌翻译", 
-      "icons": [
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/translate.png", 
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/translate.png"
-      ]
-    }, 
-    {
-      "author": "@sunert", 
-      "keys": [
-        "c"
-      ], 
-      "repo": "https://github.com/Sunert/Script/blob/master/Task/tvpreview.js", 
-      "id": "TVlist", 
-      "script": "https://raw.githubusercontent.com/Sunert/Script/master/Task/tvpreview.js", 
-      "settings": [
-        {
-          "id": "c", 
-          "val": "cctv8", 
-          "name": "电视台", 
-          "type": "text", 
-          "desc": "请填写小写英文台标，示例: 北京: btv1 | 湖南: hunan | 浙江: zhejiang 河南: henan| 江苏: jiangsu|广东: guangdong 更多电视台请参加电视家网络列表"
-        }
-      ], 
-      "name": "电视预告", 
-      "icons": [
-        "https://cdn.jsdelivr.net/gh/Sunert/Profiles@master/QuantumultX/Rules/Images/icon/tvpreview_mini.png", 
-        "https://cdn.jsdelivr.net/gh/Sunert/Profiles@master/QuantumultX/Rules/Images/icon/tvpreview.png"
-      ]
-    }, 
-    {
-      "author": "@sunert", 
-      "keys": [
-        "city", 
-        "citynum", 
-        "cut", 
-        "day_desc", 
-        "hour_desc", 
-        "index_desc"
-      ], 
-      "repo": "https://github.com/Sunert/Script/blob/master/Task/moji.js", 
-      "id": "moji", 
-      "script": "https://raw.githubusercontent.com/Sunert/Script/master/Task/moji.js", 
-      "settings": [
-        {
-          "id": "city", 
-          "val": "北京", 
-          "name": "城市", 
-          "type": "text", 
-          "desc": "请填写中文地区，可选择地市区和部分景区"
-        }, 
-        {
-          "id": "citynum", 
-          "placeholder": "默认1 (点击以展开说明)", 
-          "val": "", 
-          "name": "城市序号", 
-          "type": "number", 
-          "desc": "选择地区，请填写日志内地区前的数字序号"
-        }, 
-        {
-          "id": "cut", 
-          "val": false, 
-          "name": "精简日志模式", 
-          "type": "boolean", 
-          "desc": "显示详情描述，默认关闭日志"
-        }, 
-        {
-          "id": "day_desc", 
-          "val": true, 
-          "name": "每周天气", 
-          "type": "boolean", 
-          "desc": "每周天气接口，可显示6天天气情况"
-        }, 
-        {
-          "id": "hour_desc", 
-          "val": false, 
-          "name": "小时天气", 
-          "type": "boolean", 
-          "desc": "未来6小时天气情况"
-        }, 
-        {
-          "id": "forty_desc", 
-          "val": false, 
-          "name": "40天预告", 
-          "type": "boolean", 
-          "desc": "未来40天天气预告"
-        }, 
-        {
-          "id": "index_desc", 
-          "val": true, 
-          "name": "生活指数", 
-          "type": "boolean", 
-          "desc": "可显示生活指数情况"
-        }
-      ], 
-      "name": "墨迹天气", 
-      "icons": [
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/moji.png", 
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/moji.png"
-      ]
-    }, 
-    {
-      "author": "@sunert", 
-      "keys": [ ], 
-      "repo": "https://github.com/Sunert/Script/blob/master/Task/trainquery.js", 
-      "id": "trainquery", 
-      "script": "https://raw.githubusercontent.com/Sunert/Script/master/Task/trainquery.js", 
-      "settings": [
-        {
-          "items": [
-            {
-              "key": "ADULT", 
-              "label": "成人"
-            }, 
-            {
-              "key": "0X00", 
-              "label": "学生"
-            }
-          ], 
-          "id": "people", 
-          "val": "ADULT", 
-          "name": "乘客类型", 
-          "type": "radios", 
-          "desc": "成人/学生"
-        }, 
-        {
-          "id": "left", 
-          "val": "北京", 
-          "name": "出发站点", 
-          "type": "text", 
-          "desc": "填入中文站点"
-        }, 
-        {
-          "id": "end", 
-          "val": "上海", 
-          "name": "目的地", 
-          "type": "text", 
-          "desc": "填入中文站点"
-        }, 
-        {
-          "id": "leavedate", 
-          "val": "2020-08-15", 
-          "name": "出发时间", 
-          "type": "date", 
-          "desc": "填入出发日期，请按照格式填写"
-        }, 
-        {
-          "id": "setrain", 
-          "val": "G5", 
-          "name": "列车车次", 
-          "type": "text", 
-          "desc": "填入列车车次或者列车序号，列车序号请查看日志详情"
-        }
-      ], 
-      "name": "列车时刻", 
-      "icons": [
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/12306.png", 
-        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/12306.png"
       ]
     }
   ]
