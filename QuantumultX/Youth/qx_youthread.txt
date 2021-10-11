@@ -1,8 +1,0 @@
-hostname = ios.baertt.com
-
-# 中青?可能是文章信息
-https:\/\/ios\.baertt\.com\/v5\/article\/info\/get\.json url script-request-header https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/Youth_Read.js
-# 中青文章Body
-https:\/\/ios\.baertt\.com\/v5\/article\/complete\.json url script-request-body https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/Youth_Read.js
-# 中青阅读时长
-https:\/\/ios\.baertt\.com/v5\/user\/app\_stay\.json url script-request-body https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/Youth_Read.js
