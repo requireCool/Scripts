@@ -353,8 +353,8 @@
     {
       "author": "@sunert", 
       "descs_html": [
-        "<p>额外签到奖励[<font color='#FF0000',font-weight: bold>extraRewardId</font>]的可选值会随签到天数增加而改变，后期请自行抓包更改</p>", 
-        "<br />", 
+		    "<p>下方应用设置的变量说明：<p>",
+        "<p>额外签到奖励<font color='#FF0000',font-weight: bold>[extraRewardId]</font>的可选值会随签到天数增加而改变，后期请自行抓包更改</p>", 
         "<p>(默认45为兑换0.4元额度，51为兑换1天VIP，58为兑换1888金币)</p>"
       ], 
       "keys": [
