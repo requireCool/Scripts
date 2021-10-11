@@ -70,6 +70,10 @@ if (isGetCookie = typeof $request !== 'undefined') {
     if (!tokenArr[0]) {
         $.msg($.name, '【提示】请先获取电视家一cookie')
         return;
+    };
+    if (!RewardId[0]) {
+        $.msg($.name, '【提示】请先输入连续签到额外奖励ID')
+        return;
     }
     timeZone = new Date().getTimezoneOffset() / 60;  //时区
     timestamp = Date.now() + (8 + timeZone) * 60 * 60*1000;  //时间戳
