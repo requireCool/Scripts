@@ -22,5 +22,5 @@
 | BoxJs             | QL          |
 |-------------------|-------------|
 | sy_signheader_dsj | DSJ_HEADERS |
-| RewardId | REWARD |
+| extraRewardId | DSJ_REWARDID |
 | drawal_dsj | DSJ_DRAWAL  |

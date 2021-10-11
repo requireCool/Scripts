@@ -31,11 +31,11 @@ if ($.isNode()) {
     };
 
     if (process.env.DSJ_REWARDID && process.env.DSJ_REWARDID.indexOf('#') > -1) {
-        RewardId = process.env.DSJ_HEADERS.split('#');
-    } else if (process.env.DSJ_HEADERS && process.env.DSJ_HEADERS.indexOf('\n') > -1) {
-        RewardId = process.env.DSJ_HEADERS.split('\n');
+        RewardId = process.env.DSJ_REWARDID.split('#');
+    } else if (process.env.DSJ_REWARDID && process.env.DSJ_REWARDID.indexOf('\n') > -1) {
+        RewardId = process.env.DSJ_REWARDID.split('\n');
     } else {
-        RewardId = process.env.DSJ_HEADERS.split()
+        RewardId = process.env.DSJ_REWARDID.split()
     };
 
     if (process.env.DSJ_DRAWAL && process.env.DSJ_DRAWAL.indexOf('#') > -1) {
