@@ -361,25 +361,11 @@
       "script": "https://raw.githubusercontent.com/Sunert/Script/master/Task/dianshijia.js", 
       "settings": [
         {
-          "items": [
-            {
-              "key": "55", 
-              "label": "提现额度"
-            }, 
-            {
-              "key": "44", 
-              "label": "1天VIP"
-            }, 
-            {
-              "key": "42", 
-              "label": "1888金币"
-            }
-          ], 
           "id": "REWARD", 
-          "val": "55", 
+          "val": "", 
           "name": "额外签到奖励", 
-          "type": "radios", 
-          "desc": ""
+          "type": "text", 
+          "desc": "RewardID会随签到天数增加而改变，后期请自行抓包更改.(默认45为兑换0.4元额度，51为兑换1天VIP，58为兑换1888金币)"
         }
       ], 
       "name": "电视家", 

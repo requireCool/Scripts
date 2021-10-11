@@ -22,5 +22,6 @@
 | BoxJs             | QL          |
 |-------------------|-------------|
 | sy_signheader_dsj | DSJ_HEADERS |
-| drawal_dsj        | DSJ_DRAWAL  |
+| RewardId | REWARD |
+| drawal_dsj | DSJ_DRAWAL  |
 >QL下好像有个任务不能完成，但总体上没有啥问题，建议还是在QuanX下跑
