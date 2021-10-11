@@ -12,7 +12,7 @@ const notify = $.isNode() ? require('./sendNotify') : '';
 let sleeping = "",
     detail = ``,
     subTitle = ``;
-let RewardId = $.getdata('REWARD') || '45'; //额外签到奖励，默认45为兑换0.4元额度，51为兑换1天VIP，58为兑换1888金币
+//let RewardId = $.getdata('REWARD') || '45'; //额外签到奖励，默认45为兑换0.4元额度，51为兑换1天VIP，58为兑换1888金币
 const dianshijia_API = 'http://api.gaoqingdianshi.com/api'
 let tokenArr = [],
     DsjurlArr = [],
@@ -27,6 +27,14 @@ if ($.isNode()) {
         console.log(`您选择的是用换行隔开\n`)
     } else {
         Dsjheaders = process.env.DSJ_HEADERS.split()
+    };
+
+    if (process.env.DSJ_REWARDID && process.env.DSJ_REWARDID.indexOf('#') > -1) {
+        RewardId = process.env.DSJ_HEADERS.split('#');
+    } else if (process.env.DSJ_HEADERS && process.env.DSJ_HEADERS.indexOf('\n') > -1) {
+        RewardId = process.env.DSJ_HEADERS.split('\n');
+    } else {
+        RewardId = process.env.DSJ_HEADERS.split()
     };
 
     if (process.env.DSJ_DRAWAL && process.env.DSJ_DRAWAL.indexOf('#') > -1) {
@@ -49,6 +57,7 @@ if ($.isNode()) {
 } else {
     tokenArr.push($.getdata('sy_signheader_dsj'))
     DrawalArr.push($.getdata('drawal_dsj'))
+    RewardId.push($.getdata('REWARD'))
 }
 
 if (isGetCookie = typeof $request !== 'undefined') {

@@ -368,7 +368,7 @@
       "settings": [
         {
           "id": "REWARD", 
-          "val": "", 
+          "val": "45", 
           "name": "额外签到奖励[extraRewardId]", 
           "type": "text", 
           "desc": "请直接输入数字，不要带有引号及任何标点"
