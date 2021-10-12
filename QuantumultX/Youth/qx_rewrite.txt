@@ -16,7 +16,7 @@ https:\/\/ios\.baertt\.com\/v5\/article\/info\/get\.json url script-request-head
 https:\/\/ios\.baertt\.com\/v5\/article\/complete\.json url script-request-body https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/youth_read.js
 
 # 中青阅读时长
-https:\/\/ios\.baertt\.com/v5\/user\/app\_stay\.json url script-request-body https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/youth_read.js
+https:\/\/ios\.baertt\.com/v5\/user\/app_stay\.json url script-request-body https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/youth_read.js
 
 # 自动提现(url有误，有待修复)
 https:\/\/kandian\.wkandian\.com\/v5\/\w+\/withdraw\d?\.json url script-request-body https://gitee.com/requireCool/Scripts/raw/master/QuantumultX/Youth/youth.js
