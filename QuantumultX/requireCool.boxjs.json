@@ -6,6 +6,21 @@
   "repo": "https://gitee.com/requireCool/Scripts/tree/master/QuantumultX", 
   "apps": [
     {
+      "author": "@requireCool", 
+      "descs_html": [
+		    "<p>仅读取变量信息用<p>"
+      ], 
+      "keys": [
+        "jd_city_withdraw_cookie", 
+        "jd_city_withdraw_code"
+      ],
+      "name": "京东城城分现金", 
+      "icons": [
+        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/dianshijia.png", 
+        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/dianshijia.png"
+      ]
+    },
+    {
       "id": "多合一签到",
       "name": "京东",
       "keys": ["CookiesJD"],
