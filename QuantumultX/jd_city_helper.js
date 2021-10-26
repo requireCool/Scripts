@@ -9,28 +9,26 @@ if (isGetInfo = typeof $request !== 'undefined') {
 function GetInfo() {
     if ($request && $request.url.match(/\/client\.action/)) {
 	    if (!cookie) {
-	        const headerVal = JSON.stringify($request.headers);
-            const cookie = headerVal['cookie']
-            $.log(`headerVal:${headerVal}`);
-            if (headerVal) $.setdata(cookie, 'jd_city_withdraw_cookie')
-            $.msg($.name, `获取Cookie: 成功`, ``)
+            const cookie = $request.headers.Cookie
+            $.log(`获取到提现cookie:${cookie}`);
+            $.setdata(cookie, 'jd_city_withdraw_cookie')
+            $.msg($.name, `获取Cookie: 成功, cookie: ${cookie}`, ``)
 	    }
 	    
-        const reqBody = $request.body;
-        const codeVal = reqBody.match(/"code":".*?"/)[1]
+        const codeVal = $request.body.match(/"code":".*?"/)[1]
         if (code) {
             if (code.indexOf(codeVal) > -1) {
                 $.log("此code已存在，本次跳过")
             } else if (code.indexOf(codeVal) == -1) {
                 codes = code + "&" + codeVal;
                 $.setdata(codes, 'jd_city_withdraw_code');
-                $.log(`${$.name}获取提现code: 成功, code: ${codeVal}`);
+                $.log(`获取到提现code: ${codeVal}`);
                 bodys = codes.split("&")
                 $.msg($.name, "获取第" + bodys.length + "个提现code: 成功🎉", ``)
             }
         } else {
             $.setdata(codeVal, 'jd_city_withdraw_code');
-            $.log(`${$.name}获取提现code: 成功, code: ${codeVal}`);
+            $.log(`获取到提现code: ${codeVal}`);
             $.msg($.name, `获取第一个提现code: 成功🎉`, ``)
         }
     }
