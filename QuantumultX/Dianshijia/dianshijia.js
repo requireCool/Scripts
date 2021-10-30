@@ -472,7 +472,7 @@ function Withdrawal() {
             if (logs) $.log(`金币兑换现金 : ${data}\n`)
             let todrawal = JSON.parse(data);
             if (todrawal.errCode == 0) {
-                detail += `【金额提现】✅ 到账` + todrawal.data.price / 100 + `元 🌷\n`
+                detail += `【金额提现】✅ 到账${todrawal.data.price/100}元 🌷\n`
                 drawalCode = todrawal.errCode
             } else {
                 detail += ` 提现${todrawal.data.price/100}元失败，errCode:${todrawal.errCode}，msg:${todrawal.msg}\n`
