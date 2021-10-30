@@ -253,7 +253,13 @@ function cashlist() {
                    if (!drawalVal) {
                     detail += `【金额提现】❌ 请获取提现地址 \n`
                    } else {
-                      await Withdrawal()
+                       var date = new Date
+                       if (date.getHours()==8 || date.getHours()==12 || date.getHours()==20) {
+                           await Withdrawal()
+                       }
+                       else {
+                           console.log('未在提现时间段(8,12,20点)')
+                       }
                      }
                   }
             } else {
@@ -473,9 +479,8 @@ function Withdrawal() {
             let todrawal = JSON.parse(data);
             if (todrawal.errCode == 0) {
                 detail += `【金额提现】✅ 到账${todrawal.data.price/100}元 🌷\n`
-                drawalCode = todrawal.errCode
             } else {
-                detail += ` 提现${todrawal.data.price/100}元失败，errCode:${todrawal.errCode}，msg:${todrawal.msg}\n`
+                detail += `- 提现${todrawal.data.price/100}元失败，errCode:${todrawal.errCode}，msg:${todrawal.msg}\n`
             }
             resolve()
         })
