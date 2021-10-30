@@ -94,7 +94,7 @@ if (isGetCookie = typeof $request !== 'undefined') {
             await Addsign(); // 额外奖励，默认额度
             await run();
             //await tasks(); // 任务状态  *
-            await getGametime(); // 游戏时长
+            //await getGametime(); // 游戏时长
             await total(); // 总计
             await cash(); // 现金
             await cashlist(); // 现金列表  *
