@@ -211,6 +211,7 @@ function total() {
                 resolve()
             }
             */
+            resolve()
         })
     })
 }
