@@ -191,7 +191,7 @@ function total() {
             url: `${dianshijia_API}/coin/info`,
             headers: JSON.parse(signheaderVal)
         }, (error, response, data) => {
-            //if (logs) $.log(`${$.name}, 总计: ${data}\n`)
+            if (logs) $.log(`${$.name}, 总计: ${data}\n`)
             let result = JSON.parse(data)
             subTitle = `待兑换金币: ${result.data.coin} `
             
@@ -245,7 +245,7 @@ function cashlist() {
             //console.log(`提现列表: ${data}`)
             if (result.errCode == 0) {
                 for (s = 0; s < result.data.length; s++) {
-                    if (result.data[s].type == '2' && result.data[s].ctime >= parseInt(timestamp/1000)) {
+                    if (result.data[s].type == '2' && result.data[s].ctime >= (parseInt(timestamp/1000)-86400)) {
                         cashres = `✅ 今日提现:` + result.data[s].amount / 100 + `元 `
                     }
                 }
@@ -261,7 +261,7 @@ function cashlist() {
                            await Withdrawal()
                        }
                        else {
-                           detail += `- 未在提现时间段 \n`
+                           //detail += `- 未在提现时间段 \n`
                            console.log('未在提现时间段(8,12,20点)')
                        }
                      }
