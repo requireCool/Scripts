@@ -95,7 +95,7 @@ if (isGetCookie = typeof $request !== 'undefined') {
             await run();
             await tasks(); // 任务状态  *
             await getGametime(); // 游戏时长
-            //await total(); // 总计
+            await total(); // 总计
             await cash(); // 现金
             await cashlist(); // 现金列表  *
             await coinlist(); // 金币列表
@@ -191,7 +191,7 @@ function total() {
             url: `${dianshijia_API}/coin/info`,
             headers: JSON.parse(signheaderVal)
         }, (error, response, data) => {
-            if (logs) $.log(`${$.name}, 总计: ${data}\n`)
+            //if (logs) $.log(`${$.name}, 总计: ${data}\n`)
             let result = JSON.parse(data)
             subTitle = `待兑换金币: ${result.data.coin} `
             try {
