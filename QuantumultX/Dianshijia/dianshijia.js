@@ -207,7 +207,7 @@ function total() {
                 }
                 resolve()
             } catch (e) {
-                console.log(`${e}`)
+                console.log(`错误：↓\n${e}`)
                 resolve()
             }
             
