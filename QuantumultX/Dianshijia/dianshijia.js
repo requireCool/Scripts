@@ -261,6 +261,7 @@ function cashlist() {
                            await Withdrawal()
                        }
                        else {
+                           detail += `- 未在提现时间段`
                            console.log('未在提现时间段(8,12,20点)')
                        }
                      }
