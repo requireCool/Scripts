@@ -82,7 +82,7 @@ if (isGetCookie = typeof $request !== 'undefined') {
     bjTime = new Date(timestamp).toLocaleString('zh', {hour12: false,timeZoneName: 'long'}); //标准北京时间
     console.log(`\n === 脚本执行 ${bjTime} ===\n`);
     console.log(`------------- 共${tokenArr.length}个账号 -------------`);
-    console.log(`RewardId=${RewardId}`)
+    console.log(`选择的奖励Id=${RewardId}`)
     for (let i = 0; i < tokenArr.length; i++) {
         if (tokenArr[i]) {
             signheaderVal = tokenArr[i];
@@ -93,11 +93,11 @@ if (isGetCookie = typeof $request !== 'undefined') {
             await signinfo(); // 签到信息
             await Addsign(); // 额外奖励，默认额度
             await run();
-            await tasks(); // 任务状态  *
+            await tasks(); // 任务状态
             await getGametime(); // 游戏时长
             await total(); // 总计
             await cash(); // 现金
-            await cashlist(); // 现金列表  *
+            await cashlist(); // 现金列表
             await coinlist(); // 金币列表
             if ($.isNode() && process.env.DSJ_NOTIFY_CONTROL && drawalCode == '0') {
                 await notify.sendNotify($.name, subTitle + '\n' + detail)
@@ -303,7 +303,7 @@ function dotask(code) {
                 }
                 
             } else if (taskcode == '4000') {
-                //console.log('任务代码:'+code+'，'+taskres.msg)
+                console.log('任务代码:'+code+'，'+taskres.msg)
             }
             resolve()
         })
