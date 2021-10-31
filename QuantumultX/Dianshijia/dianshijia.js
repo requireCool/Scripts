@@ -105,7 +105,7 @@ if (isGetCookie = typeof $request !== 'undefined') {
         }
     }
 })()
-    .catch((e) => $.logErr(e))
+    //.catch((e) => $.logErr(e))
     .finally(() => $.done())
 
 function GetCookie() {
@@ -262,7 +262,7 @@ function cashlist() {
                        }
                        else {
                            //detail += `- 未在提现时间段 \n`
-                           console.log('未在提现时间段(8,12,20点)')
+                           console.log(`\n未在提现时间段(8,12,20点)`)
                        }
                      }
                   }
