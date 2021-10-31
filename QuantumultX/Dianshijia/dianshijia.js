@@ -210,18 +210,18 @@ function total() {
                 console.log(`错误：↓\n${e}`)
                 resolve()
             }
-            
+            */
             if (result.data.tempCoin) {
                 for (k = 0; k < result.data.tempCoin.length; k++) {
                     coinid = result.data.tempCoin[k].id
                     $.get({
                         url: `http://api.gaoqingdianshi.com/api/coin/temp/exchange?id=` + coinid,
                         headers: JSON.parse(signheaderVal)
-                    }, (error, response, data))
+                    }, (error, response, data) => {
+                        console.log(`收获待领取金币${coinid}`)
+                    })
                 }
             }
-            resolve()
-            */
             resolve()
         })
     })
