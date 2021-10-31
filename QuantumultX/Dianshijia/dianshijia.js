@@ -210,8 +210,8 @@ function total() {
                 console.log(`错误：↓\n${e}`)
                 resolve()
             }
-            */
-             if (result.data.tempCoin) {
+            
+            if (result.data.tempCoin) {
                 for (k = 0; k < result.data.tempCoin.length; k++) {
                     coinid = result.data.tempCoin[k].id
                     $.get({
@@ -221,6 +221,7 @@ function total() {
                 }
             }
             resolve()
+            */
         })
     })
 }
