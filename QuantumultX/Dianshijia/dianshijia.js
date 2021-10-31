@@ -212,7 +212,7 @@ function total() {
             }
             */
             if (result.data.tempCoin) {
-                console.log(`存在待收取的任务金币，开始：`)
+                console.log(`\n有待收取的任务金币，开始：`)
                 for (k = 0; k < result.data.tempCoin.length; k++) {
                     coinid = result.data.tempCoin[k].id
                     $.get({
@@ -220,7 +220,7 @@ function total() {
                         headers: JSON.parse(signheaderVal)
                     }, (error, response, data) => {
                         let extempresult = JSON.parse(data)
-                        if (extempresult.errCode == "0") console.log(`收获成功，id=${result.data.tempCoin[k].id}`)
+                        if (extempresult.errCode == "0") console.log(`收获成功，id=` + coinid)
                     })
                 }
             }
