@@ -212,13 +212,15 @@ function total() {
             }
             */
             if (result.data.tempCoin) {
+                console.log(`存在待收取的任务金币，开始：`)
                 for (k = 0; k < result.data.tempCoin.length; k++) {
                     coinid = result.data.tempCoin[k].id
                     $.get({
                         url: `http://api.gaoqingdianshi.com/api/coin/temp/exchange?id=` + coinid,
                         headers: JSON.parse(signheaderVal)
                     }, (error, response, data) => {
-                        console.log(`收获待领取金币${coinid}`)
+                        let extempresult = JSON.parse(data)
+                        if (extempresult.errCode == "0") console.log(`收获成功，id=${coinid}`)
                     })
                 }
             }
@@ -272,8 +274,7 @@ function cashlist() {
                            await Withdrawal()
                        }
                        else {
-                           //detail += `- 未在提现时间段 \n`
-                           console.log(`\n未在提现时间段(8,12,20点)`)
+                           console.log(`\n提现：未在提现时间段(8,12,20点)`)
                        }
                      }
                   }
