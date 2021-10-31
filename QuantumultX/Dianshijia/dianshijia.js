@@ -194,7 +194,7 @@ function total() {
             if (logs) $.log(`${$.name}, 总计: ${data}\n`)
             let result = JSON.parse(data)
             subTitle = `待兑换金币: ${result.data.coin} `
-            
+            /*
             try {
                 if (result.data.tempCoin) {
                     for (k = 0; k < result.data.tempCoin.length; k++) {
@@ -210,8 +210,17 @@ function total() {
                 console.log(`错误：↓\n${e}`)
                 resolve()
             }
-            
-            //resolve()
+            */
+             if (result.data.tempCoin) {
+                for (k = 0; k < result.data.tempCoin.length; k++) {
+                    coinid = result.data.tempCoin[k].id
+                    $.get({
+                        url: `http://api.gaoqingdianshi.com/api/coin/temp/exchange?id=` + coinid,
+                        headers: JSON.parse(signheaderVal)
+                    }, (error, response, data))
+                }
+            }
+            resolve()
         })
     })
 }
