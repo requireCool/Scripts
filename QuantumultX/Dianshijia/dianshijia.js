@@ -220,7 +220,7 @@ function total() {
                         headers: JSON.parse(signheaderVal)
                     }, (error, response, data) => {
                         let extempresult = JSON.parse(data)
-                        if (extempresult.errCode == "0") console.log(`收获成功，id=${coinid}`)
+                        if (extempresult.errCode == "0") console.log(`收获成功，id=${result.data.tempCoin[k].id}`)
                     })
                 }
             }
