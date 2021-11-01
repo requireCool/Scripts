@@ -212,7 +212,7 @@ function total() {
             }
             */
             if (result.data.tempCoin) {
-                console.log(`\n`)
+                //console.log(`\n`)
                 for (k = 0; k < result.data.tempCoin.length; k++) {
                     coinid = result.data.tempCoin[k].id
                     $.get({
