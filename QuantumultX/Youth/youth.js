@@ -27,11 +27,20 @@ let cardTime = $.getdata('zqtime') || "05"; //打卡时间
 let readtimes = 0;
 
 // 需获取部分
-let withdrawUrl = $.getdata('cashurl_zq'); //提现地址，可选
-let withdrawBody = $.getdata('cashbody_zq'); //提现请求，可选
-let cookieYouth = $.getdata('youthheader_zq');
-let artBody = $.getdata('read_zq');
-let readTimes = $.getdata('readtime_zq');
+if ($.isNode()) {
+    console.log(`- 当前环境: NodeJs`)
+    if (process.env.YOUTH_WITHDRAW_URL) withdrawUrl = process.env.YOUTH_WITHDRAW_URL.split();
+    if (process.env.YOUTH_WITHDRAW_BODY) withdrawBody = process.env.YOUTH_WITHDRAW_BODY.split();
+    if (process.env.YOUTH_HEADER) cookieYouth = process.env.YOUTH_HEADER.split();
+    if (process.env.YOUTH_ARTBODY) artBody = process.env.YOUTH_ARTBODY.split();
+    if (process.env.YOUTH_TIME) readTimes = process.env.YOUTH_TIME.split();
+} else {
+    let withdrawUrl = $.getdata('cashurl_zq'); //提现地址，可选
+    let withdrawBody = $.getdata('cashbody_zq'); //提现请求，可选
+    let cookieYouth = $.getdata('youthheader_zq');
+    let artBody = $.getdata('read_zq');
+    let readTimes = $.getdata('readtime_zq');
+}
 
 //声明部分
 let rotaryscore = 0,doublerotary = 0;
