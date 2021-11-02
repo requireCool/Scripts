@@ -34,6 +34,9 @@
 | youth_autoread| YOUTH_READ |
 | autotime_zq | YOUTH_TIME |
 | 看教程抓包 | YOUTH_ARTBODY |
+|-- 以下可选 -- | ---------------------------- |
+|withdrawUrl|YOUTH_WITHDRAW_URL|
+|withdrawBody|YOUTH_WITHDRAW_BODY|
 
 如果环境变量不对，就自己看教程吧
 
